@@ -19,7 +19,6 @@ function ImageCard({ image }) {
             </Card>
         </Col>
     )
-
 }
 
 export default ImageCard;
