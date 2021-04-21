@@ -3,8 +3,8 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import MyImages from '../components/MyImages';
-import UploadImage from '../components/UploadImage';
+import MyImages from '../components/images/MyImages';
+import UploadImage from '../components/images/UploadImage';
 
 function Routes() {
   return (
