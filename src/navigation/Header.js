@@ -29,13 +29,23 @@ function HeaderNavigation() {
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="4">
+                    <Link to='/edit-image'>
+                       Edit An Image
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="5">
                     <Link to='/contact'>
                         Contact
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="5">
+                <Menu.Item key="6">
                     <Link to='/about'>
                         About
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="7">
+                    <Link to='/simple-upload-image'>
+                        Simple Image Upload
                     </Link>
                 </Menu.Item>
             </Menu>

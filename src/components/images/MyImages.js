@@ -6,7 +6,7 @@ function MyImages({ images }) {
 
     return (
         <div className="site-card-wrapper">
-                <h1>Hello World From My Images</h1>
+                <h1>My Images</h1>
                 <p>Here are your images</p>
             <Row gutter={16}>
                 {images.map(img =>
