@@ -63,10 +63,14 @@ function UploadImage() {
   return (
     <div>
       <div className='file-upload'>
-        <input type='text' ref={nameEl} onChange={handleNameChange} />
-        <input type='file' ref={el} onChange={handleChange} />
-        <div className='progressBar' style={{ width: progress}} >
-          {progress}
+        <div style={{ marginTop: '20px'}}>
+          <input placeholder="Input Name Of File" type='text' ref={nameEl} onChange={handleNameChange} />
+        </div>
+        <div style={{ marginTop: '20px'}}>
+          <input type='file' ref={el} onChange={handleChange} />
+        </div>
+        <div className='progressBar' style={{ marginTop: '20px', width: progress}} >
+          {/* {progress} */}
         </div>
         <button onClick={uploadFile} className='upbutton'>
           Upload

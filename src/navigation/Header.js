@@ -43,11 +43,6 @@ function HeaderNavigation() {
                         About
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="7">
-                    <Link to='/simple-upload-image'>
-                        Simple Image Upload
-                    </Link>
-                </Menu.Item>
             </Menu>
         </Header>
     )
