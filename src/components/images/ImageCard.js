@@ -8,14 +8,14 @@ const { Meta } = Card;
 function ImageCard({ image }) {
 
     return (
-        <Col span={8} >
-            <Card title={image.title}
+        <Col span={8} style={{marginBottom: '20px'}} >
+            <Card title={image.name}
                 bordered={true}
                 hoverable
                 style={{ width: 240, height: 300}}
-                cover={<img alt={image.title} src={image.image_url} />}
+                cover={<img alt={image.name} src={image.location} />}
             >
-                <Meta title={image.title} description={image.description} />
+                <Meta title={image.name} description={image.name} />
             </Card>
         </Col>
     )

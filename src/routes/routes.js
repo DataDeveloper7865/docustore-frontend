@@ -6,6 +6,7 @@ import Contact from "../components/Contact";
 import MyImages from '../components/images/MyImages';
 import UploadImage from '../components/images/UploadImage';
 import SimpleUploadImage from '../components/images/SimpleUploadImage';
+import EditImage from '../components/images/EditImage';
 
 function Routes() {
   return (

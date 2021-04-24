@@ -22,7 +22,8 @@ class ImageApi {
             : {};
     
         try {
-          return (await axios({ url, method, data, params, headers })).data;
+        //   return (await axios({ url, method, data, params, headers })).data;
+          return (await axios({ url, method, data, params })).data;
         } catch (err) {
           console.error("API Error:", err.response);
           let message = err.response.data.error.message;
@@ -33,7 +34,7 @@ class ImageApi {
     //Get all images
     static async getAllImages() {
         let res = await this.request(`images/`)
-        console.log(res)
+        console.log("WE IN THE API GET IMAGES CLIENT ROUTE YO!", res)
         return res
     }
 
@@ -44,25 +45,36 @@ class ImageApi {
         return res
     }
 
-    //Create an image
-    static async uploadAnImage(name) {
-        let res = await this.request(`images/`, name)
+    //Create an image in the database!
+    static async uploadAnImageInDB(name) {
+        console.log("WE IN THE API GET IMAGES CLIENT ROUTE YO! THE DATA YOU SENT:", name)
+        let res = await this.request(`images/`, name, "post")
+        console.log(res)
+        return res
+    }
+
+    //Create an image in S3
+    static async uploadAnImageInS3(image) {
+        console.log("WE IN THE API GET IMAGES CLIENT ROUTE YO! THE DATA YOU SENT:", image)
+        let res = await this.request(`images/`, image, "post")
         console.log(res)
         return res
     }
 
     //update an image by id
-    static async updateImageById(id) {
-        let res = await this.request(`images/${id}`, data, "patch")
+    static async updateImageById(id, updateData) {
+        let res = await this.request(`images/${id}`, updateData, "patch")
         console.log(res)
         return res
     }
 
     //delete an image by id
-    static async updateImageById(id) {
-        let res = await this.request(`images/${id}`, data, "delete")
+    static async deleteImageById(id) {
+        let res = await this.request(`images/${id}`, "delete")
         console.log(res)
         return res
     }
 
 }
+
+export default ImageApi;
